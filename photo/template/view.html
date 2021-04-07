@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <table cellpadding="10px" cellspacing="10px">
+            <tr>
+                <td>Name</td>
+                <td>Price</td>
+                <td>Image</td>
+            </tr>
+            {% for i in res %}
+            <tr>
+                <td>{{i.name}}</td>
+                <td>{{i.price}}</td>
+                <td><img src="/media/{{i.url}}" style="height: 300px; width:300px;"></td>
+            </tr>
+            {%endfor%}
+        </table>
+    </div>
+</body>
+</html>

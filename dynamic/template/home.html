@@ -1,0 +1,18 @@
+
+{%extends 'base.html'%}
+{%load static%}
+
+{%block content%}
+
+<h1>Welcome</h1>
+ <p>this is vidhu</p>
+ {% for dests in dest %}
+ <div>
+ <p>id:{{dests.id}}</p>
+ <p>name:{{dests.name}}</p>
+ <img src="static/{{dests.image}}">
+
+ {%endfor%}
+</div>
+<p>Byee</p>
+ {%endblock%}

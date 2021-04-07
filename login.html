@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/c330d3c861.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+        body{
+            background-image: url(https://visme.co/blog/wp-content/uploads/2017/07/50-Beautiful-and-Minimalist-Presentation-Backgrounds-015.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+        <div class="row">
+            <div class="col-3"></div>
+      <div class="col-6">
+        <div class="card card-register mt-5 p-5">
+<center>
+          <h2 style="color:rgb(10, 108, 153);" class=" p-2 card card-register col-4">LOGIN</h2></center>
+          <div class="p-2 justify-content-inbetween">
+            <form action="#" method="POST">
+
+                {%csrf_token%}
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"
+                    ><i class="far fa-envelope"></i
+                  ></span>
+                </div>
+                <input type="email" class="form-control" placeholder="Email" />
+              </div>
+
+              <div class="input-group mb-3">
+                <div class="input-group-append">
+                  <span class="input-group-text"
+                    ><i class="fas fa-lock"></i
+                  ></span>
+                </div>
+                <input
+                  type="password"
+                  class="form-control"
+                  placeholder="Password"
+                />
+              </div>
+              <div class="row">
+                <div class="col-6 mt-1">
+                  <label class="custom-checkbox">
+                    <input type="checkbox" />&nbsp;
+                    <span class="custom-control-description">Remember me</span
+                    ><br /><br />
+                  </label>
+                </div>
+                <div class="col-6 mt-1">
+                  <a href="#" class="text-decoration-none text-dark float-right"
+                    >Forget password</a
+                  >
+                </div>
+              </div>
+              <div class="text-center">
+                <input type="submit" class="btn btn-success" value="Sign in" />
+              </div>
+              <br />
+            </form>
+            <div class="col-3">
+
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+{%load bootstrap4 %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AffiliateRegister</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/c330d3c861.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+        body{
+            background-image: url(https://visme.co/blog/wp-content/uploads/2017/07/50-Beautiful-and-Minimalist-Presentation-Backgrounds-015.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="Container">
+      <div class="row">
+        <div class="col-3"></div><br>
+        <div class="col-6">
+      <div class="card card-register mt-5">
+    <h1 class=" text-center p-2" style="color:blue">AffiliateRegister</h1>
+    <form method="POST"  class="col-sm-6 p-2 ml-3">
+        {%csrf_token%}
+        {% bootstrap_form form %}
+        <div class="p-1">
+          <div>
+            <input type="submit" class="btn  btn-info ">&nbsp;
+          
+          <a href="{% urlpattern 'index'%}" class="btn  btn-danger float-right" >Sign in</a>&nbsp
+          </div>
+        </div>
+    </form>
+  </div>
+  <div class="col-3"></div>
+</div>
+</div>
+</div>
+
+</body>
+</html>

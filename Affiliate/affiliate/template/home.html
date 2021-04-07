@@ -1,0 +1,85 @@
+{%load bootstrap4 %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+    rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+  />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap"
+    rel="stylesheet"
+  />
+  <script
+    src="https://kit.fontawesome.com/c330d3c861.js"
+    crossorigin="anonymous"
+  ></script>
+  
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-light " style="background-color: black;"> 
+        <a class="navbar-brand" href="#" style="color:white">SMV collections</a>
+        <form class="form-inline">
+          <input class="form-control mr-sm-2 justify-content-center" type="text" placeholder="Search">
+          <button class="btn btn-success" type="submit">Search</button>
+        </form>
+      
+        <ul class="navbar-nav ml-auto"> 
+            <li class="nav-item"> 
+              <a class="nav-link text-white" href="/home">Home</a>
+            </li> 
+            <ul class="navbar-nav ml-auto"> 
+                <li class="nav-item"> 
+                  <a class="nav-link text-white" href="/productdisplay">Product</a>
+                </li> 
+            <ul class="navbar-nav ml-auto"> 
+            <li class="nav-item"> 
+              <a class="nav-link text-white" href="/cart">Cart</a>
+            </li> 
+        </ul> 
+        <ul class="navbar-nav ml-auto"> 
+          <li class="nav-item"> 
+            <a class="nav-link text-white" href="/checkout">Checkout</a>
+          </li> 
+          <ul class="navbar-nav ml-auto"> 
+            <li class="nav-item"> 
+              <a class="nav-link text-white" href="#">{{user}}</a>
+            </li> 
+          <ul class="navbar-nav ml-auto"> 
+            <li class="nav-item"> 
+              <a class="nav-link text-white" href="/logout">Logout</a>
+            </li> 
+       
+    </nav> 
+   
+   <div class="container mt-2 p-1">
+    <center>
+    <h1 class="mt-4" style="color: crimson;">Welcome to SM collections</h1></center>
+
+    <div class="row">
+    <div class="col-12 col-md-6 p-1">
+        <img src="https://cashoverflow.in/wp-content/uploads/2020/01/How-does-Affiliate-Marketing-works.png" class="img-responsive">
+    </div>
+    <div class="col-12 col-md-6 p-2">
+        <img src="https://bloggerspassion.com/wp-content/uploads/2019/12/best-web-hosting-affiliate-programs.jpg" class="img-responsive" style="width:500px; height:300px">
+    </div>
+</div>
+    <div class="card card-register" style="color:indigo; font-weight:bold">
+    <div class="p-2"> Are you interested in affiliate marketing if so join us  earn your money
+        click here <a href="Affiliate"  class="btn btn-danger">Affiliate login</a></div>
+    <div class="p-2">If you want to buy ladies dress like kurthi,sarees and jewells(coverings)
+            click here <a href="index" class="btn btn-danger">Customer login</a></div>
+    <div class="p-2">If you want Sell your product like ladies dress and jewells you can be patner of us join us free 
+    according to profit money will be collected later
+                click here <a href="Seller" class="btn btn-danger">Seller login</a></div>        
+    </div>
+</div> 
+</body>
+</html>

@@ -1,0 +1,100 @@
+{%load bootstrap4%}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap"
+      rel="stylesheet"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/c330d3c861.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Product display</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      .zoom {
+        padding: 50px;
+        transition: transform 0.2s;
+        width: 100px;
+        height: 50px;
+        margin: 0 auto;
+      }
+
+      .zoom:hover {
+        -ms-transform: scale(2); /* IE 9 */
+        -webkit-transform: scale(2); /* Safari 3-8 */
+        transform: scale(2);
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <nav
+        class="navbar navbar-expand-md navbar-light justify-content-between"
+        style="background-color: black;"
+      >
+        <a class="navbar-brand" href="#" style="color: white;"
+          >SMV collections</a
+        >
+
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link text-white" href="{% url 'home'%}">Home</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">Cart</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">Payment</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link text-white" href="{% url 'index'%}">Login</a>
+          </li>
+        </ul>
+      </nav>
+      <br />
+    </div>
+    <marquee direction="right" height="50px" style="color: rgb(81, 45, 165);">
+      <b>
+        join us affiliate user you will get commission according to your link
+        used by customer's Hurry up !! -> <a href="{% url 'Affiliate'%}">click here</a>
+      </b>
+    </marquee>
+    <div class="row">
+      {% for i in res %}
+      <div class="col-md-3 col-6 p-2 ">
+        <p class="text-center text-primary"><b>{{i.name}}</b></p>
+        <img
+          src="media/{{i.url}}"
+          style="height: 300px; width: 300px;"
+          class="img-fluid p-5 img-thumbnail card card-register rounded zoom"
+          id="bgimg"
+          onclick="imageClick('{{i.id}}')"
+        />
+      </div>
+      {% endfor%}
+    </div>
+    <script>
+      function imageClick(id) {
+        window.location = `detail/${id}`;
+      }
+    </script>
+  </body>
+</html>

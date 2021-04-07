@@ -1,0 +1,178 @@
+{%load bootstrap4%}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap"
+      rel="stylesheet"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/c330d3c861.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Product display</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      
+      .zoom {
+        padding: 50px;
+        transition: transform .2s;
+        width: 100px;
+        height: 50px;
+        margin: 0 auto;
+      }
+      
+      .zoom:hover {
+        -ms-transform: scale(2.0); /* IE 9 */
+        -webkit-transform: scale(2.0); /* Safari 3-8 */
+        transform: scale(2.0); 
+      }
+    
+        /* The side navigation menu */
+.sidebar {
+    margin:0;
+    padding: 0;
+    width: 200px;
+    background-color:cornsilk;
+    position:fixed;
+    height: 100%;
+    overflow: auto;
+  }
+  
+  /* Sidebar links */
+  .sidebar a {
+    display: block;
+    color:black;
+    padding: 16px;
+    text-decoration: none;
+  }
+  
+  /* Active/current link */
+  .sidebar a.active {
+    background-color:green;
+    color: white;
+  }
+  
+  /* Links on mouse-over */
+  .sidebar a:hover:not(.active) {
+    background-color:red;
+    color: white;
+  }
+  
+  /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+  div.content {
+    margin-left: 200px;
+    padding:16px;
+    height: 1000px;
+  }
+  
+  /* On screens that are less than 700px wide, make the sidebar into a topbar */
+  @media screen and (max-width: 700px) {
+    .sidebar {
+      width: 100%;
+      height: auto;
+      position:relative;
+    }
+    .sidebar a {float: left;}
+    div.content {margin-left: 0;}
+  }
+  
+  /* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+  @media screen and (max-width: 400px) {
+    .sidebar a {
+      text-align: center;
+      float: none;
+    }
+  }
+  #pgcontent
+  {
+      align-items: center;
+      text-align: center;
+      padding-bottom: 10;
+  }
+    
+    </style>
+  </head>
+  <body>
+    <div>
+      
+      <nav
+        class="navbar navbar-expand-md navbar-light justify-content-between"
+        style="background-color: black;"
+      >
+        <a class="navbar-brand" href="#" style="color: white;"
+          >SMV collections</a
+        >
+        
+
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link text-white" href="{% url 'home'%}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="/cart">Cart</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">Payment</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">Your account</a>
+          </li>
+         
+            <a class="nav-link text-white" href="{% url 'logout'%}">Logout</a>
+          </li>
+        </ul>
+      </nav>
+      <br />
+    </div>
+   
+      <div class="row">
+          
+        {% for i in res %}
+        <div class="col-5 mt-5 mb-5">
+          <div class="ml-5 card card-register">
+            <img
+            src="/media/{{i.url}}"
+            style="height: 400px; width:500px"
+            class="img-fluid p-5 mb-5 mt-5  rounded zoom" 
+            
+          />
+        </div>
+      </div>
+         
+        <div class="col-6 card card-register mt-5 p-1">
+          <div class="ml-2">
+            <h3 ><b>Name:{{i.name}}</b></h3>
+           
+            <h3><b>Color:{{i.color}}</b></h3>
+           
+            <h3 ><b>Price $:{{i.price}}</b></h3>
+            
+            <h3><b>Description:</b></h3>
+            <h4><b>{{i.desc}}</b></h4><br>
+           
+        
+            <a href="#" class="btn btn-success float-left ml-2 " >Add Cart</a>
+            <a href="#" class="btn btn-warning ml-2">Buy Now</a>
+          </div>
+         
+          {% endfor%}
+        </div>
+      </div>
+    
+
+  </body>
+</html>

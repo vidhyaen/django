@@ -1,0 +1,98 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <style>
+            a {
+              text-decoration: none;
+              float: right;
+            }
+            body {
+              font-family: "Racing Sans One", cursive;
+             
+            }
+            h1{
+                color:mediumvioletred;
+                font-family: "Ramaraja", serif;
+                font-weight: bold;
+                padding:0px 50px 0px 30px;
+            }
+            ul {
+              font-family: serif;
+              color:indigo;
+              font-size: larger;
+              font-weight: bold;
+              padding-left: 10px;
+              padding:0px 50px 0px 30px;
+            }
+            .tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+            </style>
+    </head>
+        <body>
+            <div class="w3-bar w3-black w3-text-aqua w3-padding">
+                <a href="contact.html" class="w3-padding">Contact</a>
+                <a href="resume.html" class="w3-padding">Resume</a>
+                <a href="project.html" class="w3-padding">project</a>
+                <a href="skill.html" class="w3-padding">Skills</a>
+                <a href="portfolio.html" class="w3-padding">Home</a>
+              </div>
+          <div class="w3-animate-top">
+            <h1>Resume</h1>
+            <ul >
+            <li>I like to deisgn web page and started learning UI/Ux designer</li>
+            <li>My resume is designed by myself</li>
+            <li>you can use many tools for designing </li>
+            <li>I have designed this resume using tool whimsical tool</li>
+        </ul>
+        <div class="tooltip">
+            <a href="Resumeui (1).pdf" class="w3-left w3-padding-16 w3-button w3-green">Resume</a>
+            <span class="tooltiptext">click me to download</span>
+          </div>
+          <h1>Additionally learned</h1>
+          <h1>WordPress</h1>
+          <ul>
+          <li>
+          WordPress is an open source Content Management System (CMS)</li>
+        <li>It allows the users to build dynamic websites and blog. </li> 
+         <li>WordPress is the most popular blogging system on the web and allows updating, customizing and managing the website from its back-end CMS and components.</li>
+        </ul>
+
+    </div>
+    </body>
+</html>
